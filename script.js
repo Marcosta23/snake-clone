@@ -74,6 +74,10 @@ function startGame(){
      snake.unshift(newHead);
 }
 
-let speed = 100;
+let speed = prompt("Digite:\n 3 para easy\n 2 para normal e \n 1 para Hard");
+if (speed <= 3 && speed >=1){
+    let game = setInterval(startGame, speed*100);
+}else{
+    let game = setInterval(startGame, 10);
+}
 
-let game = setInterval(startGame, speed);
